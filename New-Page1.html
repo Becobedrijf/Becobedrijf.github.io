@@ -1,0 +1,421 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="description" content="Bijles platform">
+        <meta name="keywords" content="">
+        <title>Elevare</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link href="" rel="stylesheet" crossorigin="anonymous">
+        <link href="assets/css/index.css" rel="stylesheet">
+        <style>
+        .dropzone-1 {
+          border-radius: 0 !important;
+          border: none !important;
+        }
+        .dropzone-1 {
+          background-color: #eaeaea;
+          flex-basis: 100%;
+          flex-grow: 1;
+          margin-bottom: 10px;
+          margin-top: 10px;
+          padding: 10px;
+          border-radius: 10px;
+          border: 2px dashed #ccc;
+          min-height: 300px;
+        }
+        
+        .dropzone-elem-1 {
+          margin-bottom: 0px;
+          margin-top: 0px;
+          padding: 4px;
+          font-size: 11px;
+        }
+        null
+        </style>
+      </head>
+      <body>
+        <div id="dropzone-1" class="dropzone-1"><div id="uuidef2f1d31-a317-4b76-856a-05e4b11b12cd" class="cmnBox srvcBox component border-dotted" style="width: 15rem; background-color: white; display: block;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="upButton"><i class="fa-solid fa-caret-up" aria-hidden="true"></i></span><span class="downButton"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuidef2f1d31-a317-4b76-856a-05e4b11b12cd" style="display: block; border: 1px solid transparent;" class=""><div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6"><p class="">&nbsp; <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhMWFhUXFRcVFxYYGBcXGhcXFRYWGBUVGBUYHiggGBolGxgXITEhJSkrLi4uFx81ODMsNygtLisBCgoKDg0OFxAQGi0fHx0tLS0tKystLSstLS0rLS0tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tNzc4LTctLSsrOP/AABEIAKoBKAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAQIDBQYABwj/xABGEAACAQIEAwUFBQUFBgcBAAABAhEAAwQSITEFQVETImFxgQYykaHRUpKxwfAUI0JT4WJyotLiFUOCk7LCBxYzNFRjg0T/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/EACgRAQEAAQIGAgICAwEAAAAAAAABAhESAxMhMVFhBEEioVKRMkJxFP/aAAwDAQACEQMRAD8A8TJptKTXAUCUlTXLRESCJAYeR2NMuNtpHWgks7/ltPhPKrDEcTe4GTKuVmzhAM2QhY7hMlRAEx08Kq1qxuYN0RHGua3nZYPcRmKqWI2DRO40PjUVXmltnWnXmLEk7kk6aDWno4CxkGaZzc/KOQoix4Qy5yxYqAJ3g/8AD9qN8vPTxNXGJDYW4zqVuI3a21zf2lysWt6QYM9DpuN8qra0S19mJZiSSZJOuvM1mqnxl97jDMSW0Gvidz8aEe3HqJHl+hRGKxDPE8tgCTvqTLEmuS2zN1PjVBnAcMjXFVzCFkVojMc7qsLPnJ8Aam4hwprMBiM0DMukqTOkTOnXxFRKJfvArl0MakQTv66VxYkkkkkkkk6kkmSSeZqKgyU8YfSfz/KtHwgYVJY3Mx7Mns7lkQz5dFW4GJXvxrlGgI503A8I7V/eUhnAkEKO9JLQdQIBgAeHhU1XRQYbCM7BVEnX5CTWi4NxHs5VS8suQJK3LTsQFGe2RqJA01qbFWThGvKqsyhyoYhoBUkLLAAGVM6dfKs72pEeBmandezT+1fs/wBlbFxbUPAL9jmNpCoBfvMTzZYy6DKeumGuJVli8QXMnpGnr9ak4faAS5eZQwUBVB5u539FDHzirEvUIMAoQuWPdyggADVhKwZ2ifh40PiMwULAykSDlAJEk+9vvRtzEBrikDINAQSWGgiTPKNOdA4liWJJJnmaqBrlojcEc9RGnWpcEFBZiobKshTMEyBJjcAEmPCiVvhlyvsBI8wxMCNgQzeutDWgQZBIjmNx5VQ7EJKC4VCyxUQMoYASSB4bSOtO4dZVm70QN1glmkwFRRu0xTcRcZjLsWO0kk6U7AXsjhtdJ2OU6qQYbkYOh60Dr+C7MsHRl3yl1ZdQAYKkDWD8xTeFKnar2mialiBOiqzExz22qfiOIDZUQMEtghczZzLGWYkADXQQB/DQpfIwa3OmuoB+XMcqgJxtu2LblLq3NV1KOjjU8mER61SMaOxuNLjKEtoJkhFIk7SZJPXTbWq81Yg7heLCMZggqQQyhg3MK07LMSRrppUOPZC57Ncq9JLCeZBOsTt4RQ9ITVCGkrq6qjq6urqDq6urqCSn2XggwDHIzHyqOkmgs7uODW2B0aLa9S2Ukkk8tY0qtY0makoHqaMxHELlyM7kgAADYQqhVGUQNAAPSgRT1FRVjwu1nfLEyrHaT3VL6Dme7Ec5qfG4a2q2igbW12jZu9M3HVSY0GgHxoXAYnJJ1DQMpHIhgSflHrRfEuKm6e6otrlVSq8wvInpOsbVAA9qAG5Hbrz/AF6irV+I57YTWcqpEAKACCSOZYwOnPeq/CYNrh0GkgFjoATtJNOtLBg77Uqr/BcDUrbe9dFtLpIRlUXPd3zQwCbjQmddqH4vw04e81rMGykFXXZlZQyOPNSDVhheKr2D2L6syHK6BTlYXVMZpMhVKFgQBrIPKq7G4k3XLtGoAAGwVVCqo8AoA9Kyqw4TaR0y2ye1AJNpyFW8eQDSPdH8JImJBoe2lrIQffEwQd94jkRtofOeVD4eySdJ9KvbHCkUlbwYHs84ZSuUzGUTBBBOmaRB6xU1IpFA8tPnUltyIg7beFT4jDAMQPxB+Y3qXB4QNMzzPITp1NBJd4lmtkMDnyC2CGOVl099TMsIkERrvtVeuElGcnYqABE6nUnoPrV9huByhuHUa5FBGsGCS3KOYjptIpi+zt82xc7OAdp0LaEyF3ggaHnGlTVdAWP4h2mHtWSD+7mNtZ/iJ3OmkcqpzYrdcCwOHQRfyE3VCguCQjlnyHuwcsquYDWG5c2e13DAmRQbZuEOzKijQIYUAoMoAUDny11pqtjG43DoAuQ694MDzg6NpsD0PSgGt1fcNwyM4FwgIsu2qgkKJyLmIlm2A8am9o7SteF21ly3US5lGUZWygXFKqTk7wYxyBFa1Z0ZcpRmDwgLqHMKYkhlkAjQxvA5jeJozEXVbQu8T3u4sxmkka7gcqlv4bIhuWyht6hLkSxYn3GUnuOFJO0d2QTvV1NDcZ+wp7i3bjZIMEJbViurDMGd4J55RI6VQFfnUzCpbmJDIFKLp7rDNp1kEwZ+vWiU/h9lM374HLAaMwUkFlmCQf4SSPKrP2gwCpahbdqyASwV3m+8MVBgmcpQhvdA0MVCnE1W0i5RdeIPagMlsAkBbanqIJJ08OdVePvG47OYlmLGNpPTwqKq7lT8Mwgu3UtlgoYxmMdCQNdJJgCdJIqO4lElraQUltCGDjSCI0iI33mZ6c9soOIYYI2UZpA7yuuVkYEgoRz2BnxoI0fxHEO7lrmjQoIgiAqhVEHX3QN6BNIhK6urqoSupaSg6urq6gdXRXCiBdXs8uWWzHveBC+sjKfDvGgGpKWkoJUFXd3BBs627DgIG/ey5zZJktPdEwdojTeqRDWpYN2N9nLuUW0Fz7KzEBijK0FQA3TlUqxT8MwYuPDMFUKzMZEhVRmJAO/u/OoVtd7KCDrEiYPjqAY86izRt+utTYLEZHDTEEH3Vbb+y2h8jUVYthiiAXAWt5yVdCMrmACFbY6L5jpQ9y5ncsYGZp8BJorjOL7S5o2aNJzMw3Owb3dI0GlCLbqA/G2gp0zdIZgTsIbTYEHb8alwdlSJZo221PnHOobGEJXNyGn6HrVnw3hr3JKjuj3nOir5sdB5b1Ksanh3Crd3IiZEzXGNsIxuu6IpPe1IUtpvGp20qXEYg2SiIly2qyCCM2jNLgZ9CSAukCJPWhOFmxZK3Eus1xGE9whSp0bIZnMN9YrVYPjKX07HIud2Zs1tQVtARlYo+oyiTPLTeNOdbjGcQcXnUgLoCSAqWt3OkCATEa1Nw/ALcfsWbszBIOXNmI1iCywMsn08qj4lh1BBV8+aZaIkye8BvHn0NR8PcLctsSQFdSSNSACCSKv0n2Mu4xrAVMPiMwgnMiG2yljqJ96SAJPMR0oe/wARZxnJIuSc93UtcBAChhsWEHX8xRnFXBVlZ1ZhcLqyDQhx3gx05gETJ3puGFnKiP32PujVFUkmBccGSPIaTvUVn3HPqfWacly4VKgtl3IBMQOZHSj+IMjTChWznRfdAJMgfKpeD23QNcCqwIZMrhipJygTymWBgnlWkC2eGLAZiCsCRMNDKSGAIiAAT5RVbjMK6Q2V1BJKEggmPHrtV/xTHu9xCc1ooMozGcsknRVUALBgADYDeguO3u0ud3UGG05s6gtoPHSPCkpWcdaktYMspOZQJgAmCzRso67bxyqVrdaXhXBrrI5RshGUBUAL9pzDBu8Aqw7FZgEeltSRiAACCRIBEjqOYqbE3JADZWOhVwApA6Mo/Q8qXE24JEg6nUbHxHhUdtDuJ0I16Hlr10+VaRJdwRVVLEBm1yayF5Mek66HXnzq54VwJXFq6rLeJYh8O023bKAWW2waH7rAgAg+FPwOEt4i3dMOcSBnEtIuAe+QInMBrHMU3HPbtYfsShN5itxiW0tFZgAAe8VOoO2nMVnVdFHxzAdlduWyIKsQPKdNDqNI+NBnBhWXtWygrm7uVmHMKVnuMfHqKLfiBN0XLs3SN87EkwuVZYzMabztXY3iFu9bZryn9oEAXFgdryJuiIzDfONW2PWtRlV4/EK8QmUjQaz3eWZjqWnnQJqS4ajFaiUoFdFKK41UNpKUiuoG11dXUCzXTSV1B1dXV1A5TUitUNOFRRRsnJmJ3JEeWX/MDTbak1Ji7pJA5QpA0G6jXx2ptpuXn89DQFYdCSANyYHmdq1WA4amGy3sWAWENbwsjM8bNe37O34HvNyga1QYpLWjWnzTIKkMCNTB73KMo3Os0auNgobYylDKnSRrMaaEAz8azVidjOy5ELEqNSBJ90MdSBpW+9n7yEHCXGLWnTIfdYW2mEeV0UE7b7iY3OJx19Hy5BlWJKie6zGWGu+2/lRmFsXEKMDkzAlWDQQNie7qKxercq6vsmFN7Dm0XYgo7Ocuo1UoomBMGSTPhUK8NdP2cgnNeGYAaFYYj8IM+NWnFuMJfIdLaAoFRsRdkyxGkIAZOhIJBMA7VR43DXu1IeXeA2YHPmUiVYNzBBEVmLWi41g7Mo//AKgKjM1sgLEsDcI1gyG8DHImKo7OEBRm72hiQJAHiOXnNQYXENKgnMo0ykkiCZiJ2nXzrUsTbvXbNq1CllErm2TvAE6giTPoKdjurG4TkRC1wAXGKt3fcyk858D0oR0Fm4yzmgDbKCCQCRm1ggkiV6VfcdwouYsoAqSAQABqTbDGTpLE8zG9V3EuGKhIVpCgEkka51DKBG5gzI0pKWBcLgw5DDKBu06gDvaknUnQec1WXRqcpMTO0eRira3nNsRlCq2uwksDE9dAdaibC5DmYKSCDkMweesESpHMHnVQIqdoWa4+WAxWZgnUwCTpr0nenYXirWwioEtkSGuhFNxpJ/iYHKIIGnTnRvGb9q4toW1ZMoYFSSQJbN3WJ1EluQjx3NVdsFpZVhRAJ5CTAzHYVQNhLFs3CGIKgGMzdmDqBvrGhJjwoXE4y4IXtGItsShB906aqRqNh8KlxdgqxB+I2MiQR4RQN5dN6sRFj8U112uOczMZJozgalWBYP2b5kEAFSwG5DaMFkN6bigDa0kkDSYPPXlRfDuItb7p71ttHtkmCvOPstvqKqRc4WyMKRiTdt3HBzWQCxDmYLnTlr3eu/iH7ZX7d1lvW7iQygm0IBtMZLKIADLMmfGqi7dk6aDkJmB0ohBYS2Lj5rjEsuQd1VO0s2pYwZAEbb6RU0XVQXaIs8Ld7N26FfLbEzk7h1hhnJ94b5QDoDtFJxHDm27W23UlT6UmL4vfdxce4zMq5Vzd4KMuQgKZAkbwN9a2yqrgpgp7UyrEpa6urqqENIadTTQJFdS11A2urq6g6urq6g6pbVomY5b/AIVFRNi8ApEakgmdQQJ0j1+VA1iZ1nTTXlUlsVPw3D9o8EpsSA7ZAx2C5uXx5VNicL2dxkIYQdmgGORMdd/Iiopllas8Hh2dgqKWYmAoBJJ6ADerKx7PjJcdGF2LSXBlOUoWyEi5bImMrGGBju78qI9lgRirABUfvbZYtAACuCTLQNBJrFrWgS9g3tMUuKysDBBBB+dang2AK2yWtpessoa4UMujCclsMD3HluYjUzMaUfG3ZsTeLgqxuuSDyJY0TwHil6w82YDNAE7HdR4R3jvppWa1FhiWt2s1iHdHyXNYR7bgMAJ7wOjEHkfCKiTF3XuKLa6qqKiAZzFuSoGksdyYobHNctXD2hzNq2afezaSwOo56aUJYvMGDKxDDUEaEHzqaC1fhty0U7VezzbZtNo1IGo3G4rW43EBcSZvnIIcqCw1yg5IjQba+NY2/ie0YNlAOUBo2ZhpmjZdI0GmlXrYVr9q1cQS4BtMJALdmJRhPvHJpp9ms1qCvaTHW7l8XbDcl1GZTmAAmCNPSnY5L16A1t8xfn7q933Rp3RGup2AqBbtpbAtsBcJZm00ZJVcpDRG+4JPlOxR4lnKWQwW23ZdoSCJZVVCSZnLpyioBcPhAWNlWQqWBDEMJcAhVG25JGumtT3OFl8pglmUaHSGVsjLAEAALVvxFQD2loFbDSLhCwwYSM0sDA+yRrBPiaqr2IF2+ou+4WVSY72WQCSeZ8aCTHYElne5kObRGICTpGix7wIEg6gg1V4DAXyyqtsldVIIyq6mS4JMSY57iB0rS4ktaBV/3TXWYEhu0y27cwZcnUsYnw5TUeJa0iP2j3IuPkzy5JW2EIXvAEEgkSPs0lowXEMKiXWV8wA5DVht3e9G20xQPEbqm2FQKq5py+8x0PeZ4mfAQNdtKvOKW719ndc1wZ2URqddRCbgR4VQ45blq4yuuVwMpUjaQDqOsRXSM1V3VmCJ0EGpcBbt5v3gkQY1IXNyzkAkLudOgqfh1kvcW1mC52CydtSIk7xIFXdngWHS2Lt7EZhnVSLSM2hBO75YBAMHwNW1JNWWxVoBmCnMoJAO0idDFRWMXctHNbYqeo/rWownB0AuveMquZDlBcoc2XMwBBQ8wYYaHTSsvxG0qsyq4dQdGAIBHWGAIqypYBLZnlyTmMsZ1k7kk7661FjLC5jlZYnQSdPDMdCflrXO8TTBcWIKT4gwfpWkQ/s7GYUmNTAJgddOVQRVnY4iEW4oU94AL3vdKg5WmJzAmZEcxsarjVQ2krq6qjqaaU0hoENdXV1AldSmkoOrq6uoOpQaSlFBIpou287/AKjQUEtEWaitHw1b19gElmRIABAOQQMqjTNvtvE0ZZL2bnu5XUbEA5SyggwfdYSD1Bqs4LGdWZgAGEz056c61OCw4Ds73V7TunvA5O/mGW5EEfw7aCQCK51uAsXbcntHWJO2xjedfPc+PSrS9iLDWDKlSBltr9kAypXXUkyWfaNImDUftCl0shu2xbc5gQBlBKmcw5EQw18+tR8TvpcsoFzk2QEDxoyHvHMCZUh2IGkEEDSovYDbRrnOSIEeh+kfCrnAcJDEh7ttYXULmcsp2cZVMwYnyrPJWiuMbC2stxbi6zk9zlIBJktG5IGhG9KQTc4XbS4P3gFozleC5JG4hY1+EVrOHYSw7W7tsqHUK50ZFhSVlELanuSQT1MnasbwrD3WEoQqglhmYAEiJgnppvV/w/il4NbsZFOVjKqqvIfVgIB5E7daxWhntRw4g5gioqQoBZAWESBEySAOe8E1R201DDaROkx5jmKuMY1y7bQ3WATtSqzAaBoZjp5aT5UuD4E17N2MQpyyWjOZ0iefPpoakBXE2a4i27DtdzZrjaLIHdAE7qJzaGD5iCaa7eZboZgJUgwQYkGdRvvVpirJw7NbKZkICkExmK7wVMgTqAdYNC43s2cXF10DOhECRuoIOxqgfHYlr0sV1JVWedCTOUtOxgDX+zSPw+2lw27xJBtlgUMAMBmgM4AaVHlLDWra6uFSwVYsDcYXAqHPC5WFvM0LABYmNTpQ3GsTaXD27CqRoCzHUqGJbKdNCTDeQ050GYXGC2bi22IVhAuEQ6jnETlJEgwdqo7p1M68tTy5a+lXuGVHuC2w0aVBEA5iO5qQYlgB5E0ZjsDatWmt3LioTbB7EfvWW+p95nUQgIERP8URpNa1Z0Yy25Vgw3Uhh5gyKKPE31Fv92hYP2ak5cw2MMTMcp2q24lhCtsK62hbV0CuhRmkhs+YocxmCYO0CKpMQFzLounvZJg68p5xVDw9453UsS4ZXIMlg3vZhvBqmxIrXYTiAAa2TbZWXKWCizcCFgYW5HvDeDIgEa1muJd645zZu8xDHQtroxHInf1qxKorwpq2JkyNAWO+gGmum5P41LeFcmbISFBUMCSesGBE6jetsgSabTmptVklIaWkqhKQ0tJQJXV1dQdSU6KSKBK6lrqBKUV1KBQOQUXZSobK1p+D+zt+4q3VtBrZJ1N21bzZTDKCzAj4c6zasC8LuBLiORmCsCRtMGYnlWlxmMtyOytp30ykZmbUsGk7HNm/Cg+N8I7FlYBVW4CRbFxLptkHVCyMZGxBOpB6g03hIAuoS2XX3uSn+Fj4AwaxW4kvY+665GclQSYOsE7nqKnsKWtlVgToTp3hIMTEgaT4xRnFHuEKly4lxgSxZcrcoANxR3judzvQ+Hw5kZZk6CPHSKimYfh8hSTAMakEiSTppt606zYk66fkKvLeBuIp7pQ2+68wp78lVynU8+VScHwyC4puAlQZgcyNgfCd6zquhBwzsZzGHKwUMEQ3iN9II/u+VE8IwAa4imYJA0BJHUgDmN/StBi8DdYgqpi4qsyqP49nBjnMnXrVivB2Uq1q2wIjcf2QGkE6yZ9DWNzWg7iXClKrILi2+5/izKFl20J0CyR4DlVR7PXriZ0Rc2YbZssHVQZ5+9HwrQi091IvgjLMQDvG59J+NS8GwlvJzDDUnkDO/wAhUnVO0VNjhQuOv7QxJyQEnYLtDA7ETUPGOEAIUVhCS6LlgsCZ9/mAvTczWg/Ys7l5IKwFjWQRGszI/rUWAUo5d7jRJAEnnzy1UYTC2ratNy2WHmQPXwmhuMhmSWyqM47O2pBAWGnQcttT1NbL2lwsv1PWSYB2XX1PrVanCbS2w7Zix0gQcskyY8AAfWmvVr6YTFYBrYBYMrToCOkTr18OVE3OF23yZr4VmVWy5SxkiTr5zV77Q4Vg2RoMS7ZRALvqW8ZAU1WtbRTauSGIADJJBBWYJMbRG1XVNFBxDBWggNpy/eOYlcvIQI+PxpmC4L2qEowDLJbN3UCjLB7U90GTsY5VuP8AZ1pltWMim3Ga5fBWEzZiYuDcpIEHeNtaq+PYdRZK286ol8o1sxGYLo5IAJJA5z561qVNFBY4VaHa23uLnVQQ8zbCnIxdSvvmJEc5ETyzGMG435TESOvhVzfs1WYq1WozVDiBQ1y4YyzpMx466/M/GrDEpVfdFdGEBFNK1LFGvwx+zW4is6kd4hGhG3ysY+zBnbfpVFWaSnuKZVQhpDXTSUHUlLSUD64inZD0rsh6UDYpIqTIeld2Z6UDIpQKeLR6GpFsN9k0C2av+F40KpR7YuIdQpJXK8QHBXXbQjmPIRS2bDTsassNhX+yazdGpqNsrVjhrVT8B9nMRfYBLZjqdBXqXs5/4cIgDYg5j05CuWWcnSdW5PLzrDYYtooJPQCa0nDfZHE3I/d5R1bT5V6dYweFw+gCL5AE/KnXONoPcUnz0rz58fHH/LKT910x4eWX+MtU9n2PL2kW+8sp1I0LKBCBjzy96D0NXGA9msPa2tgnqdaFuccc7QPT61F/te59r5CuF+bwJ5rp/wCXi300qWgNgBTorO2+LP8Aa+QouzxjqAflXXD5/AvTTRzy+NxItyoqI2V6dfw59abYxatsdelEV7cbhnNcerz2WdKrgzZ9PKD+FSNg8+r/ACorsxMxrT6TDyahxg03yyepp/7Ov2RUtRveUbmmUwx7k1qO5gkO6g+lAYj2fsPvbX4UXc4ig5n4VA3HLXMn4VwvE4H8p/bpMOJ9SqXFexFhthHkaqMd7BliSLjEnm2pPqda2A49Y+3HmrfSpU4rZO11PjH41nXD/XL9taZzvj+nmOK9gbw2YH0rHca4HetE50MDmBIr6GW6rbEHyINCY/AI4IZQau7LH2msvfo+V8atVN6voD2k9gsPdByrlbqNDXmnGP8Aw6v29VOYfOuuPGxvdLw7GEmi7nFbx3u3D3SkZjGQrlKBZgLGkUbiPZq6nvAr5iKhPA36103Ys7aqXNRmrZuCPUbcIaruibarKSrL/ZTU08Lam6G2q+ko5uHNXVd0TbWjTAp0p44YvT5UbaA6GjEYDlXn1ejSK21wlenyom1wdTy+VWVtvCiLbZTJ2+PyrNyrUxgG1wNenyo3D+zqtoBJ6AVKmNcnRNOhH+oVZtxa8qRbNu2eZVAD94vXO8RuYOwPsQTq4FterQKusJw7h+HMswusOSjN89qyT3nOty8zHqSp/EmpLd8fa+Y/Ja8+fE4l7O2PDw+28X2nVRFi0qDqdT8BUN3jN1/eYx55R8KyCXx9pvi5/MVOMYvJT5kD/uJrz5YcTLvk648vHti0gx6Dd1+M/hThxFOrHyU/nFZ1cXzj5x/0gU18b/d/H8axPjY/bd4t+mhbi1scn+KD8zUR43b+wfvj6VRftPj8hTWvjr8q6Tg4eGN+XlpbXGbJ5OPIqfzFHWcbaba5H94R8xIrFkrGp/KkQnkT8al4OHhN2Xl6ElxhruOoMj4irjhvE57rHyP1ry7DcYuWjoSfL8xzrR8O42lwawrfAE9D0NXDfwbuw/pzzwmc0r0QGo718L51RWvaFVsFmIzKcmvWJn4a1kuKe1jtIQlR15n1/h/GvdxPl6yTh97+nkx+Nlrdzb43iaL77geHP4DWqbFe0tpdgzfAf1rBXMax3M/rrQly+ep/CvJlhu65XV6ceHjGwxPtSOVserH6VXXfaOf92vxNZlr/AFNMa7+oP1qcnHw6TLTs0D8f/wDrX7xqNuPj+WPvH6VQM/6g/Wkzj9T9avKw8NczLy0A48n2CPJ/9NPPtOy+615fJ5+RrMM/j+P0qOQdJ+Yqzh4xm5292iu+210f7xz4Mts1D/57f+JFP/DH4NWbvp5/KhWXxP69a6TH3XO31Gsf2vs3Blu2JHmD8j9aEv4vh7fw3bR6hZHwE1l2XxPwP1rvX5GusYq0v9jmi1cFwf3WU+oYfhNQXLY6CqxrMEFW13BE6UZbxBYQfe56RPj511lc6Y6DwqC6BUl2aGuGujLiBSVCzGuoi1tYtRzFTDECfeFDLgPAfOprmHRBLR4DmazdFgsYpQJmegHM1XtdLElhr+tBQ5YnkY5CNBUlofqP6VzrcWWFYDWKmN0/Z/XwquVj+h/SpVP60+tc7G4JVieg+FEK56n0B/ImhFY+PxqW3Ph+vSs1uCl9f15ipkf9T9KFJPSPQ/WlV+rD5VnRdRwuiOX69KUv+v0aFD+J/H/ppSf7LfB/zFTRRc+B+f0pbf61oTP/AGW9VA/Eik/a1G4UebIPzNNDVYMfOoi1CHHp/Y++PpThfVtAwnwIPymm2ruicv1/XrT1ZQpuMwRFHeZjAA8ep8KreKcUs4dZusM3K2pGZvMfwjxNee8c49dxJ75yoPdtr7q/U+JrtwuBc+vaOPE40x/69Bf2xwZITtnPLMUOWdpJmdgNY5UWb2gYmVIkMveXXxHP514/VjwjjV3DnuNKn3kOqn0rtl8Wafi5T5N1/J6c17ofWowSeWvxqq4Zxi1f/wDT7tw72mMDzB/i8t6MvPGlwsTvkAga+G3qa81wsuleiZyzWH3HjdlHgWE/CZ+VM7dftj/FUNy4BtbAHiY+WtQG+x2Vfj/Sm03CzfH219TH4xXC9OzKfJlP50D27c0Hx/pTGvdbfw1/Om03LAluk+n9KguHwj0oE3E5ow8Y+k0ovrydl++PyrW1NwlrvUfOPzqGR0+dQvfH80/fb8zULXf/ALR94fmasxZuSZ2HT9fCmZx0/H6VGf74+K/WomB+2P8ACfyrUxZuSVmHSobnUbimlX+0Pur/AJaiNt/tfIf5a3IzasbF83BqTmG4118RSOPE/r1quAcGQdvCPyo63ipENGbqSIP4Qa3GUb2p5muqK5e8G+FdWmTsfxV7ZEREc5NCvx8sZa34abfhRdzeiE/L606fcOvlXLxofyz+vSnjjo/kn5/SrS3UorNmPhfy8qc+0DcrPyP0rv8AzDd5Wv8AC31q95Hzp9v9fCp+Phfy8s6eP4jlbP3TTG43ij/C33P6VqxRCDu01x/ibcvLFDiuL+y/3D+VI3EMb9m99163QNT4bervnhNl8vOjicYeV77rfSmEYs/wXfut9K9JuKJ2600U5k8HL9vOOwxf8q59xvpS/s+N/l3fusK9IXepHcgaE05vo5Xt5n/szGt/urvqD+dPvcPvGALd9fAIzAeo3r0hdYnXSiLY3pzvRyZ5eUngt06lbp//ACufSlHAL2+S5/yrn0r1gHQ0jU598LyJ5eUjgNz7F3/kvSjgNz7F3/kt9a9duqA2gjSobppz74ORPLyRuD3F3W4D0yQfmatMNbxCgALiHJIJJBEDpqdT516JZPPn1qVht5fnUvG1+jk+3m2IwV6cyWrxPMOqkfGaS1hsUdsMx8lP5GvQG98jzp2JcgAAnb6U5vo5Xt572eKH/wDOw8O8Plmpx/ax/uGH/E35tW3X3SefWoFpv9HL9sgLuK52D6n+tSK+KI/9uD9361q7g38qZhh3TTdPBsvll2XFR/7Uf4frURa/zwq/H/VWpuHX1H4GmXN/T603TwbfbKM17/4qfH/VTIvHbDIfUn/uq/vc6hetSzwzt9qF0u//ABkHx/zVFkufyE+f+arlz+NMubVdfSbfali5/JT9f8VJ+8/loPQfWrG4ahNa1TQOly9mBJgDpA08q6p2rqGmj//Z" alt="Boeken - AfasieNet" class=""></p></div>
+            <div class="col-md-6">
+                <h4 style="">Elevare</h4>
+                <p class="">Het perfecte bijlesplatform voor het leren van moeilijke vakken. Leerlingen en docenten kunnen zich aanmelden voor het geven of krijgen van extra bijles in wat voor vak dan ook. Meld je vandaag nog aan om gekoppelt te worden aan een docent of leerling.<br><span style="background-color: white; color: var(--bs-body-color); font-weight: var(--bs-body-font-weight);"><br></span></p><p class=""><span style="background-color: white; color: var(--bs-body-color); font-weight: var(--bs-body-font-weight);">Bron afbeelding: AfasieNet</span></p>
+            </div>
+        </div>
+    </div></span></div><div id="uuid799d9458-20b2-4c87-949d-d1115fb5620d" class="cmnBox component" style="width: 15rem; background-color: white; display: block;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="upButton"><i class="fa-solid fa-caret-up" aria-hidden="true"></i></span><span class="downButton"><i class="fa-solid fa-caret-down" aria-hidden="true"><br></i></span><span id="uuid799d9458-20b2-4c87-949d-d1115fb5620d" style="display: block; border: 1px solid transparent;" class=""><nav class="navbar navbar-expand-lg bg-body-tertiary"><div class="container-fluid">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="Becobedrijf.github.io" aria-current="page" href="#">Menu&nbsp;&nbsp;</a>
+                    <a class="Becobedrijf.github.io/leerlingen" href="#">&nbsp; Leerlingen&nbsp; &nbsp;&nbsp;</a>
+                    <a class="Becobedrijf.github.io/Docenten" href="#">Docenten</a>
+                </div>
+            </div>
+        </div>
+    </nav></span></div><div id="uuid77964a6d-4b90-4bb7-b4cc-56c0fd58adeb" class="component" data-type="grid-2col" data-info="GRID - 2 ROWS Component" style="display: none;" contenteditable="true"><div id="uuid7c1e703d-0504-4d6c-8de8-ca9787415939" class="formBox component" style="width: 15rem; background-color: white; display: none;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid7c1e703d-0504-4d6c-8de8-ca9787415939" style="display: block; border: 1px solid transparent;"><div class="form-header mb-1"><br></div>
+    <div class="form-body">
+        <div class="form-group mb-1">
+            <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group mb-1">
+            <input type="text" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div></span></div></div><div id="uuid14e8ec98-2fa0-44dd-bde4-a87f1057627d" class="cmnBox portfolioBox component" style="width: 15rem; background-color: white; display: none;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="upButton"><i class="fa-solid fa-caret-up" aria-hidden="true"></i></span><span class="downButton"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid14e8ec98-2fa0-44dd-bde4-a87f1057627d" style="display: block; border: 1px solid transparent;"><div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>verbeter scores</h5>
+                    <p>Met goede hulp van onze docenten gaan toetsen makkeijker.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span></div><div id="uuid9ea75a17-4452-49f9-b784-505f39704047" class="component" data-type="grid-4col" data-info="GRID - 4 ROWS Component" style="background-color: white; display: none;" contenteditable="true"><span class="upButton"><i class="fa-solid fa-caret-up" aria-hidden="true"></i></span><span class="downButton"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid9ea75a17-4452-49f9-b784-505f39704047" style="display: block; border: 1px solid transparent;" class=""><div class="row">
+        <div id="grid-4col-1" class="col dropzone-elem innCol mx-1">25%</div>
+        <div id="grid-4col-2" class="col dropzone-elem innCol mx-1">25%</div>
+        <div id="grid-4col-3" class="col dropzone-elem innCol mx-1">25%</div>
+        <div id="grid-4col-4" class="col dropzone-elem innCol mx-1">25%</div>
+    </div></span><div id="uuid733c8739-4354-42cb-86be-1b5e7f86ee80" class="cmnBox portfolioBox component" style="width: 15rem; background-color: white; display: none;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid733c8739-4354-42cb-86be-1b5e7f86ee80" style="display: block; border: 1px solid transparent;"><div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span></div></div><div id="uuid6f1bac03-f326-432d-a6ce-f23cc1b3e1de" class="cmnBox portfolioBox component" style="width: 15rem; background-color: white; display: none;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="upButton"><i class="fa-solid fa-caret-up" aria-hidden="true"></i></span><span class="downButton"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid6f1bac03-f326-432d-a6ce-f23cc1b3e1de" style="display: block; border: 1px solid transparent;"><div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="">Third slide la</h5>
+                    <p class="">Some representative placeholder content for the third slide.</p>
+                </div>
+            <div id="uuidd9391448-6fda-4d1d-a634-58de33cc9b28" class="cmnBox portfolioBox component" style="width: 15rem; background-color: white; display: block;" data-type="div" data-info="DIV Component"><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuidd9391448-6fda-4d1d-a634-58de33cc9b28" style="display: block; border: 1px solid transparent;"><div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span></div></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span></div><div id="uuid558f8ce1-17ab-4aa2-bd11-b361f4f5738d" class="cmnBox portfolioBox component" style="width: 15rem; background-color: white; display: block;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="upButton"><i class="fa-solid fa-caret-up" aria-hidden="true"></i></span><span class="downButton"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid558f8ce1-17ab-4aa2-bd11-b361f4f5738d" style="display: block; border: 1px solid transparent;" class=""><div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="" style="">Verbeter scores</h5>
+                    <p class="" style="">Door goede begleiding stijgen scores op toetsen.</p>
+                </div>
+            <div id="uuid9f562195-e7ed-4019-9679-48e43d887595" class="cmnBox portfolioBox component" style="width: 15rem; background-color: white; display: none;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid9f562195-e7ed-4019-9679-48e43d887595" style="display: block; border: 1px solid transparent;"><div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span></div></div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span><div id="uuid2eca7c03-fa4c-4617-93cc-d1d343aa0611" class="cmnBox portfolioBox component" style="width: 15rem; background-color: white; display: block;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid2eca7c03-fa4c-4617-93cc-d1d343aa0611" style="display: block; border: 1px solid transparent;"><div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="">Meer plezier</h5>
+                    <p>Wanneer je een vak beter begrijpt krijg je ook meer plezier in het leren.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span></div><div id="uuidc3c3a30a-37af-4513-a6d8-7699db4d6881" class="cmnBox portfolioBox component" style="width: 15rem; background-color: white; display: block;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuidc3c3a30a-37af-4513-a6d8-7699db4d6881" style="display: block; border: 1px solid transparent;"><div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <img src="https://appseed-srv1.com/builder/common/user.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Scherpe prijs</h5>
+                    <p>Wij bieden een goede prijs zonder hoge platform kosten.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span></div></div><div id="uuid9195e91c-0310-4698-8bfa-03c53136aef7" class="cmnBox component" style="width: 15rem; background-color: white; display: none;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="upButton"><i class="fa-solid fa-caret-up" aria-hidden="true"></i></span><span class="downButton"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid9195e91c-0310-4698-8bfa-03c53136aef7" style="display: block; border: 1px solid transparent;"><div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://appseed-srv1.com/builder/common/card.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://appseed-srv1.com/builder/common/card.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://appseed-srv1.com/builder/common/card.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div></span></div><div id="uuid6e7411a1-4247-448a-abb1-8e71a573046f" class="cmnBox component" style="width: 15rem; background-color: white; display: block;" data-type="div" data-info="DIV Component" contenteditable="true"><span class="upButton"><i class="fa-solid fa-caret-up" aria-hidden="true"></i></span><span class="downButton"><i class="fa-solid fa-caret-down" aria-hidden="true"></i></span><span class="cross-icon"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span><span id="uuid6e7411a1-4247-448a-abb1-8e71a573046f" style="display: block; border: 1px solid transparent;"><div class="cntrctBox">
+        <div class="cntrctBoxinn">
+            <div class="form-header mb-1">
+                Contact title
+            </div>
+            <div class="form-body">
+                <div class="form-group mb-1">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group mb-1">
+                    <input type="text" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group mb-1">
+                    <textarea class="form-control" placeholder="Write text"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+        <video src="https://appseed-srv1.com/builder/common/video.mp4" autoplay="autoplay" muted="muted" loop="loop" loading="lazy"></video>
+    </div></span></div></div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="" crossorigin="anonymous"></script>
+        <script>
+          null
+        </script>
+      </body>
+    </html>
+  
